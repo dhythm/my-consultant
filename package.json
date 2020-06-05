@@ -7,7 +7,7 @@
     "start": "npm build && webpack-dev-server --mode development",
     "build": "npx tsc && npx webpack",
     "preinstall": "typesync || :",
-    "postinstall": "typesync",
+    "postinstall": "typesync && npm install --ignore-scripts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,11 +16,16 @@
   "dependencies": {
     "@material-ui/core": "^4.10.1",
     "@material-ui/icons": "^4.9.1",
+    "formik": "^2.1.4",
     "history": "^5.0.0-beta.9",
+    "luxon": "^1.24.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-lottie": "^1.2.3",
     "react-router": "^6.0.0-alpha.5",
-    "react-router-dom": "^6.0.0-alpha.5"
+    "react-router-dom": "^6.0.0-alpha.5",
+    "styled-components": "^5.1.1",
+    "yup": "^0.29.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
@@ -31,11 +36,15 @@
     "@types/babel__preset-env": "^7.9.0",
     "@types/eslint": "^6.8.1",
     "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/luxon": "^1.24.0",
     "@types/prettier": "^2.0.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@types/react-lottie": "^1.2.5",
+    "@types/styled-components": "^5.1.0",
     "@types/webpack": "^4.41.17",
     "@types/webpack-dev-server": "^3.11.0",
+    "@types/yup": "^0.29.2",
     "@typescript-eslint/eslint-plugin": "^3.1.0",
     "@typescript-eslint/parser": "^3.1.0",
     "babel-loader": "^8.1.0",

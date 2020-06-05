@@ -20,6 +20,7 @@ touch webpack.config.js
 # TypeScript
 npm install --save-dev typescript ts-loader
 npm install --save-dev @types/react @types/react-dom
+npm install --save-dev typesync
 npx tsc --init
 
 # Formatter and Linter
@@ -40,5 +41,6 @@ npm install @material-ui/core @material-ui/icons
 # React Router v6
 npm install history@next react-router@next react-router-dom@next
 
-npm i --save-dev typesync
+# Libraries
+npm install --save formik yup luxon styled-components react-lottie
 ```
