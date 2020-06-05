@@ -22,7 +22,16 @@
     /* Experimental Options */
 
     /* Advanced Options */
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
+
+    "baseUrl": ".",
+    "paths": {
+      "@core/assets/*": ["./src/core/assets/*"],
+      "@core/lib/*": ["./src/core/lib/*"],
+      "@core/components/*": ["./src/core/components/*"],
+      "@app/lib/*": ["./src/app/lib/*"],
+      "@app/pages/*": ["./src/app/pages/*"]
+    }
   },
   "include": ["src"]
   // "files": ["./src/index.tsx"]

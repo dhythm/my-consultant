@@ -11,7 +11,7 @@ touch public/index.html
 npm install --save react react-dom
 
 # Babel and Webpack
-npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react
+npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react babel-plugin-module-resolver
 touch .babelrc
 npm install --save-dev webpack webpack-cli webpack-dev-server style-loader css-loader babel-loader
 gs
@@ -31,4 +31,14 @@ touch .prettierrc
 touch src/index.tsx
 touch src/App.tsx
 touch src/App.css
+mkdir -p src/core/components/{atoms,molecules,organisms}
+mkdir -p src/app/pages
+
+# Material-UI
+npm install @material-ui/core @material-ui/icons
+
+# React Router v6
+npm install history@next react-router@next react-router-dom@next
+
+npm i --save-dev typesync
 ```
