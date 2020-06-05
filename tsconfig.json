@@ -24,6 +24,7 @@
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
 
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@core/assets/*": ["./src/core/assets/*"],

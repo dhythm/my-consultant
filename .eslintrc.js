@@ -21,13 +21,16 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
-  rules: {},
+  plugins: ['react', '@typescript-eslint', 'prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+  },
   overrides: [
     {
       files: ['**/*.tsx'],
       rules: {
         'react/prop-types': 'off',
+        '@typescript-eslint/no-empty-function': [0],
       },
     },
   ],
