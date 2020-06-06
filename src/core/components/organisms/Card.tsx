@@ -1,5 +1,5 @@
+import Button from '@core/components/atoms/Button';
 import {
-  Button,
   Card as MuiCard,
   CardActions,
   CardContent,
@@ -47,7 +47,7 @@ const Card: React.FunctionComponent<Props> = ({
       </CardContent>
       {buttonText && (
         <CardActions onClick={onClick}>
-          <Button size="small" fullWidth>
+          <Button size="small" variant="outlined">
             {buttonText}
           </Button>
         </CardActions>

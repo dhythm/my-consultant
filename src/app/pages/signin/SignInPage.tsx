@@ -1,7 +1,8 @@
+import Button from '@core/components/atoms/Button';
 import Page from '@core/components/atoms/Page';
 import TextInput from '@core/components/atoms/TextInput';
 import NavBar from '@core/components/organisms/NavBar';
-import { Box, Button } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import { Form, Formik } from 'formik';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -21,9 +22,7 @@ const SignInPage: React.FunctionComponent = () => {
             <TextInput id="password" label="パスワード" type="password" />
           </Box>
 
-          <Button type="submit" variant="contained" color="primary" fullWidth>
-            ログイン
-          </Button>
+          <Button type="submit">ログイン</Button>
         </Form>
       </Formik>
     </Page>

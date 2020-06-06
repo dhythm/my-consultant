@@ -27,7 +27,7 @@ const ProblemListsPage: React.FunctionComponent = () => {
                 title={v.title}
                 subheader={DateTime.fromISO(v.createdAt).toFormat('yyyy/MM/dd')}
                 contents={v.contents}
-                buttonText="提案を追加する"
+                buttonText="提案する"
                 onClick={() => navigate(`/add-advice`)}
               />
             </Box>

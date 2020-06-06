@@ -1,9 +1,10 @@
 import { categories } from '@app/lib/constants';
+import Button from '@core/components/atoms/Button';
 import Page from '@core/components/atoms/Page';
 import TextInput from '@core/components/atoms/TextInput';
 import Checkbox from '@core/components/molecules/Checkbox';
 import NavBar from '@core/components/organisms/NavBar';
-import { Box, Button, Typography } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import { Form, Formik } from 'formik';
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -55,14 +56,7 @@ const LifeNavDetailPage: React.FunctionComponent = () => {
                 />
               </Box>
 
-              <Button
-                type="submit"
-                variant="contained"
-                color="primary"
-                fullWidth
-              >
-                送信
-              </Button>
+              <Button type="submit">送信</Button>
             </Form>
           );
         }}
