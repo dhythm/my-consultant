@@ -14,6 +14,7 @@ interface Props {
   subheader?: string;
   contents: string | string[];
   buttonText?: string;
+  buttonVariant?: string;
   onClick?: () => void;
 }
 
@@ -22,6 +23,7 @@ const Card: React.FunctionComponent<Props> = ({
   subheader,
   contents,
   buttonText,
+  buttonVariant = 'outlined',
   onClick,
 }) => {
   return (
@@ -47,7 +49,7 @@ const Card: React.FunctionComponent<Props> = ({
       </CardContent>
       {buttonText && (
         <CardActions onClick={onClick}>
-          <Button size="small" variant="outlined">
+          <Button size="small" variant={buttonVariant}>
             {buttonText}
           </Button>
         </CardActions>
