@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && webpack-dev-server --mode development --inline --watch-content-base",
-    "build": "npx tsc && npx webpack",
+    "build": "npx tsc && npx webpack && cp public/* ./dist && sed -e 's;../dist;.;g' public/index.html > dist/index.html",
     "preinstall": "typesync || :",
     "postinstall": "typesync && npm install --ignore-scripts",
     "test": "echo \"Error: no test specified\" && exit 1"
