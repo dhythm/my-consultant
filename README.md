@@ -43,6 +43,7 @@ npm install history@next react-router@next react-router-dom@next
 
 # Libraries
 npm install --save formik yup luxon styled-components react-lottie
+npm install --save-dev husky lint-staged concurrently
 
 # Environment
 touch .vscode/settings.json
