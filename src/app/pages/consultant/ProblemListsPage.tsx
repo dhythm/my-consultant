@@ -5,7 +5,7 @@ import { Box } from '@material-ui/core';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ConsultingListsPage: React.FunctionComponent = () => {
+const ProblemListsPage: React.FunctionComponent = () => {
   const navigate = useNavigate();
 
   return (
@@ -15,8 +15,8 @@ const ConsultingListsPage: React.FunctionComponent = () => {
           <Card
             title={v.title}
             contents={v.contents}
-            buttonText="内容を見る"
-            onClick={() => navigate(`/advice`)}
+            buttonText="提案を追加する"
+            onClick={() => navigate(`/add-advice`)}
           />
         </Box>
       ))}
@@ -31,4 +31,4 @@ const items = [
   },
 ];
 
-export default ConsultingListsPage;
+export default ProblemListsPage;

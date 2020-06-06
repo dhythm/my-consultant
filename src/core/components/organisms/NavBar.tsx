@@ -57,7 +57,7 @@ const NavBar: React.FunctionComponent<Props> = ({ title }) => {
               navigate(v.path);
             }}
           >
-            {v.title}
+            {v.label}
           </MenuItem>
         ))}
       </Menu>
@@ -82,8 +82,9 @@ const NavBar: React.FunctionComponent<Props> = ({ title }) => {
 };
 
 const menuItems = [
-  { title: '営業員向け', path: '/' },
-  { title: '相談一覧', path: '/consulting' },
+  { label: '相談する', path: '/life-nav' },
+  { label: '相談一覧', path: '/consulting' },
+  { label: '営業員向け', path: '/problems' },
 ];
 
 export default NavBar;

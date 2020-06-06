@@ -6,23 +6,24 @@ import { Form, Formik } from 'formik';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SignInPage: React.FunctionComponent = () => {
+const AddAdvicePage: React.FunctionComponent = () => {
   const navigate = useNavigate();
 
   return (
-    <Page header={<NavBar title="人生ナビ" />}>
-      <Formik
-        initialValues={{ userId: '', password: '' }}
-        onSubmit={() => navigate('/life-nav')}
-      >
+    <Page header={<NavBar title="アドバイスの追加" />}>
+      <Formik initialValues={{}} onSubmit={() => navigate(-1)}>
         <Form>
           <Box paddingBottom="1em">
-            <TextInput id="userId" label="お客様番号" />
-            <TextInput id="password" label="パスワード" type="password" />
+            <TextInput
+              id="advice"
+              label="アドバイス"
+              placeholder="アドバイスを記入してください"
+              rows={10}
+            />
           </Box>
 
           <Button type="submit" variant="contained" color="primary" fullWidth>
-            ログイン
+            提案する
           </Button>
         </Form>
       </Formik>
@@ -30,4 +31,4 @@ const SignInPage: React.FunctionComponent = () => {
   );
 };
 
-export default SignInPage;
+export default AddAdvicePage;
