@@ -23,7 +23,7 @@ const AddAdvicePage: React.FunctionComponent = () => {
             />
           </Box>
 
-          <Button type="submit">提案する</Button>
+          <Button type="submit">提案</Button>
         </Form>
       </Formik>
     </Page>

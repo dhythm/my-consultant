@@ -2,8 +2,10 @@ import Page from '@core/components/atoms/Page';
 import Card from '@core/components/organisms/Card';
 import CollapsibleList from '@core/components/organisms/CollapsibleList';
 import NavBar from '@core/components/organisms/NavBar';
-import { Box } from '@material-ui/core';
+import { useStyles } from '@core/lib/styles';
+import { Box, Fab } from '@material-ui/core';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AddIcon from '@material-ui/icons/Add';
 import _ from 'lodash';
 import { DateTime } from 'luxon';
 import React from 'react';
@@ -11,6 +13,8 @@ import { useNavigate } from 'react-router-dom';
 
 const ProblemListsPage: React.FunctionComponent = () => {
   const navigate = useNavigate();
+  const classes = useStyles();
+
   const groupedItems = _.groupBy(items, 'username');
 
   return (
@@ -37,6 +41,14 @@ const ProblemListsPage: React.FunctionComponent = () => {
           ))}
         </CollapsibleList>
       ))}
+      <Fab
+        href="/add-client"
+        color="primary"
+        aria-label="add-customer"
+        className={classes.fab}
+      >
+        <AddIcon />
+      </Fab>
     </Page>
   );
 };

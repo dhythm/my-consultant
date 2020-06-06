@@ -36,7 +36,8 @@ mkdir -p src/core/components/{atoms,molecules,organisms}
 mkdir -p src/app/pages
 
 # Material-UI
-npm install @material-ui/core @material-ui/icons
+npm install @material-ui/core @material-ui/icons @material-ui/pickers
+npm install -s @date-io/luxon@1.x luxon
 
 # React Router v6
 npm install history@next react-router@next react-router-dom@next

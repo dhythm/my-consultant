@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AddAdvicePage from './pages/consultant/AddAdvicePage';
+import AddClientPage from './pages/consultant/AddClientPage';
 import ProblemListsPage from './pages/consultant/ProblemListsPage';
 import AdvicePage from './pages/consulting/AdvicePage';
 import ConsultingListsPage from './pages/consulting/ConsultingListsPage';
@@ -18,6 +19,7 @@ const App: React.FunctionComponent = () => {
         <Route path="/problems" element={<ProblemListsPage />} />
         <Route path="/advice" element={<AdvicePage />} />
         <Route path="/add-advice" element={<AddAdvicePage />} />
+        <Route path="/add-client" element={<AddClientPage />} />
         <Route path="*" element={<SignInPage />} />
       </Routes>
     </Router>
