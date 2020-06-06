@@ -1,3 +1,4 @@
+import { categories } from '@app/lib/constants';
 import Page from '@core/components/atoms/Page';
 import TextInput from '@core/components/atoms/TextInput';
 import Checkbox from '@core/components/molecules/Checkbox';
@@ -5,13 +6,19 @@ import NavBar from '@core/components/organisms/NavBar';
 import { Box, Button, Typography } from '@material-ui/core';
 import { Form, Formik } from 'formik';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const LifeNavDetailPage: React.FunctionComponent = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
+
+  const selectedCategory = categories.find(c => c.id === id);
+  if (!selectedCategory) {
+    return <></>;
+  }
 
   return (
-    <Page header={<NavBar title="人生設計ナビ" />}>
+    <Page header={<NavBar title={selectedCategory.title} />}>
       <Formik
         initialValues={{ consultation: '', checked: false }}
         onSubmit={() => navigate(-1)}
@@ -20,9 +27,6 @@ const LifeNavDetailPage: React.FunctionComponent = () => {
           const { values, setFieldValue } = formikProps;
           return (
             <Form>
-              <Box paddingY="0.5em">
-                <Typography variant="h6">家計の健康診断</Typography>
-              </Box>
               <Box paddingBottom="1em">
                 <TextInput
                   id="consultation"

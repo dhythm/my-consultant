@@ -1,3 +1,4 @@
+import { categories } from '@app/lib/constants';
 import Page from '@core/components/atoms/Page';
 import Card from '@core/components/organisms/Card';
 import NavBar from '@core/components/organisms/NavBar';
@@ -13,13 +14,13 @@ const LifeNavPage: React.FunctionComponent = () => {
 
   return (
     <Page header={<NavBar title="人生設計ナビ" />}>
-      {navs.map((v, i) => (
+      {categories.map((v, i) => (
         <Box key={i} marginBottom="1em">
           <Card
             title={v.title}
             contents={v.contents}
             buttonText="詳しく相談"
-            onClick={() => navigate('/life-nav-detail')}
+            onClick={() => navigate(`/life-nav-detail/${v.id}`)}
           />
         </Box>
       ))}
@@ -34,36 +35,5 @@ const LifeNavPage: React.FunctionComponent = () => {
     </Page>
   );
 };
-
-const navs = [
-  {
-    title: '家計の健康診断',
-    contents: ['支出を最適化', '保険の見直し', '日々の節約術'],
-  },
-  {
-    title: '老　後',
-    contents: ['年金計算', '老後資産形成', '2,000万円問題'],
-  },
-  {
-    title: '住　宅',
-    contents: ['住宅ローン比較', '賃貸派or持ち家派', '土地活用'],
-  },
-  {
-    title: '教　育',
-    contents: ['教育費概算', '進路相談', '知育、習い事'],
-  },
-  {
-    title: '相　続',
-    contents: ['相続準備', '終活', '遺言、信託活用'],
-  },
-  {
-    title: '運用相談',
-    contents: ['最適な運用アドバイス', 'IDECO？ NISA？', '外貨？ 保険'],
-  },
-  {
-    title: 'その他',
-    contents: ['専門家の紹介（弁護士、税理士etc…）', '婚活、就活etc…'],
-  },
-];
 
 export default LifeNavPage;

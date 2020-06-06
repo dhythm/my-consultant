@@ -13,7 +13,7 @@ const App: React.FunctionComponent = () => {
     <Router>
       <Routes>
         <Route path="/life-nav" element={<LifeNavPage />} />
-        <Route path="/life-nav-detail" element={<LifeNavDetailPage />} />
+        <Route path="/life-nav-detail/:id" element={<LifeNavDetailPage />} />
         <Route path="/consulting" element={<ConsultingListsPage />} />
         <Route path="/problems" element={<ProblemListsPage />} />
         <Route path="/advice" element={<AdvicePage />} />
