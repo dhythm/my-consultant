@@ -1,5 +1,6 @@
 import Button from '@core/components/atoms/Button';
 import {
+  ButtonProps,
   Card as MuiCard,
   CardActions,
   CardContent,
@@ -14,7 +15,7 @@ interface Props {
   subheader?: string;
   contents: string | string[];
   buttonText?: string;
-  buttonVariant?: string;
+  buttonVariant?: ButtonProps['variant'];
   onClick?: () => void;
 }
 
