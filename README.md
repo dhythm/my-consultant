@@ -50,4 +50,7 @@ npm install --save-dev husky lint-staged concurrently
 touch .vscode/settings.json
 mkdir -p .github/workflows
 touch .github/workflows/aws.yml
+
+# PWA
+npm install --save-dev workbox-sw workbox-webpack-plugin
 ```
