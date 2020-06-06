@@ -12,7 +12,7 @@ const LifeNavPage: React.FunctionComponent = () => {
   const classes = useStyles();
 
   return (
-    <Page header={<NavBar title="人生ナビ" />}>
+    <Page header={<NavBar title="人生設計ナビ" />}>
       {navs.map((v, i) => (
         <Box key={i} marginBottom="1em">
           <Card

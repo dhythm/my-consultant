@@ -10,7 +10,7 @@ const SignInPage: React.FunctionComponent = () => {
   const navigate = useNavigate();
 
   return (
-    <Page header={<NavBar title="人生ナビ" />}>
+    <Page header={<NavBar title="ログイン" />}>
       <Formik
         initialValues={{ userId: '', password: '' }}
         onSubmit={() => navigate('/life-nav')}

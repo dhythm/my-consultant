@@ -11,7 +11,7 @@ const LifeNavDetailPage: React.FunctionComponent = () => {
   const navigate = useNavigate();
 
   return (
-    <Page header={<NavBar title="人生ナビ" />}>
+    <Page header={<NavBar title="人生設計ナビ" />}>
       <Formik
         initialValues={{ consultation: '', checked: false }}
         onSubmit={() => navigate(-1)}
