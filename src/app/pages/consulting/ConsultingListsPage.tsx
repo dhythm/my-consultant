@@ -2,6 +2,7 @@ import Page from '@core/components/atoms/Page';
 import Card from '@core/components/organisms/Card';
 import NavBar from '@core/components/organisms/NavBar';
 import { Box } from '@material-ui/core';
+import { DateTime } from 'luxon';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,6 +15,7 @@ const ConsultingListsPage: React.FunctionComponent = () => {
         <Box key={i} marginBottom="1em">
           <Card
             title={v.title}
+            subheader={DateTime.fromISO(v.createdAt).toFormat('yyyy/MM/dd')}
             contents={v.contents}
             buttonText="内容を見る"
             onClick={() => navigate(`/advice`)}
@@ -28,6 +30,7 @@ const items = [
   {
     title: '支出を最適化',
     contents: '月々の支払額を管理したい',
+    createdAt: '2020-05-17T23:02:50.665+09:00',
   },
 ];
 

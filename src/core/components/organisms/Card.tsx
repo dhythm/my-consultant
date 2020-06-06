@@ -1,9 +1,9 @@
 import {
-  Box,
   Button,
   Card as MuiCard,
   CardActions,
   CardContent,
+  CardHeader,
   Divider,
   Typography,
 } from '@material-ui/core';
@@ -11,6 +11,7 @@ import React from 'react';
 
 interface Props {
   title: string;
+  subheader?: string;
   contents: string | string[];
   buttonText?: string;
   onClick?: () => void;
@@ -18,19 +19,20 @@ interface Props {
 
 const Card: React.FunctionComponent<Props> = ({
   title,
+  subheader,
   contents,
   buttonText,
   onClick,
 }) => {
   return (
     <MuiCard elevation={5}>
+      <CardHeader
+        {...{ title, subheader }}
+        titleTypographyProps={{ align: 'center' }}
+        subheaderTypographyProps={{ align: 'center' }}
+      />
+      <Divider />
       <CardContent>
-        <Typography variant="h6" component="h2" align="center">
-          {title}
-        </Typography>
-        <Box paddingY="1em">
-          <Divider />
-        </Box>
         {typeof contents === 'string' ? (
           <Typography align="center">{contents}</Typography>
         ) : (
