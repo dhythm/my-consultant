@@ -5,13 +5,17 @@ import NavBar from '@core/components/organisms/NavBar';
 import { Box, Button, Typography } from '@material-ui/core';
 import { Form, Formik } from 'formik';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const LifeNavDetailPage: React.FunctionComponent = () => {
+  const navigate = useNavigate();
+
   return (
     <Page header={<NavBar title="人生ナビ" />}>
       <Formik
         initialValues={{ consultation: '', checked: false }}
-        onSubmit={() => {}}>
+        onSubmit={() => navigate(-1)}
+      >
         {formikProps => {
           const { values, setFieldValue } = formikProps;
           return (
@@ -51,7 +55,8 @@ const LifeNavDetailPage: React.FunctionComponent = () => {
                 type="submit"
                 variant="contained"
                 color="primary"
-                fullWidth>
+                fullWidth
+              >
                 送信
               </Button>
             </Form>

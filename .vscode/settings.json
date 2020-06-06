@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "node_modules": true
+  },
+  "search.exclude": {
+    "package-lock.json": true
+  },
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
+}

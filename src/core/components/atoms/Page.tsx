@@ -24,7 +24,8 @@ const Page: React.FunctionComponent<Props> = ({
       <Box
         className={classes.body}
         marginTop={navbar ? HEIGHT_NAVBAR : 0}
-        paddingX="1em">
+        paddingX="1em"
+      >
         {centralized ? (
           <Grid
             container
@@ -32,7 +33,10 @@ const Page: React.FunctionComponent<Props> = ({
             direction="column"
             alignItems="center"
             justify="center"
-            style={{ minHeight: `calc(100vh)` }}>
+            style={{
+              minHeight: `calc(100vh- ${navbar ? HEIGHT_NAVBAR : '0px'})`,
+            }}
+          >
             {children}
           </Grid>
         ) : (

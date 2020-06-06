@@ -12,10 +12,16 @@ import React from 'react';
 interface Props {
   title: string;
   contents: string[];
+  buttonText: string;
   onClick?: () => void;
 }
 
-const Card: React.FunctionComponent<Props> = ({ title, contents, onClick }) => {
+const Card: React.FunctionComponent<Props> = ({
+  title,
+  contents,
+  buttonText,
+  onClick,
+}) => {
   return (
     <MuiCard elevation={5}>
       <CardContent>
@@ -33,7 +39,7 @@ const Card: React.FunctionComponent<Props> = ({ title, contents, onClick }) => {
       </CardContent>
       <CardActions onClick={onClick}>
         <Button size="small" fullWidth>
-          詳しく相談
+          {buttonText}
         </Button>
       </CardActions>
     </MuiCard>

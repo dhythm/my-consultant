@@ -43,4 +43,9 @@ npm install history@next react-router@next react-router-dom@next
 
 # Libraries
 npm install --save formik yup luxon styled-components react-lottie
+
+# Environment
+touch .vscode/settings.json
+mkdir -p .github/workflows
+touch .github/workflows/aws.yml
 ```

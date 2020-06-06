@@ -1,5 +1,6 @@
 import Page from '@core/components/atoms/Page';
 import TextInput from '@core/components/atoms/TextInput';
+import NavBar from '@core/components/organisms/NavBar';
 import { Box, Button } from '@material-ui/core';
 import { Form, Formik } from 'formik';
 import React from 'react';
@@ -9,7 +10,7 @@ const SignInPage: React.FunctionComponent = () => {
   const navigate = useNavigate();
 
   return (
-    <Page>
+    <Page header={<NavBar title="人生ナビ" />}>
       <Formik initialValues={{}} onSubmit={() => navigate('/life-nav')}>
         <Form>
           <Box paddingBottom="1em">

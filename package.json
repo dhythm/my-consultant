@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm build && webpack-dev-server --mode development",
+    "start": "npm run build && webpack-dev-server --mode development --inline --watch-content-base",
     "build": "npx tsc && npx webpack",
     "preinstall": "typesync || :",
     "postinstall": "typesync && npm install --ignore-scripts",

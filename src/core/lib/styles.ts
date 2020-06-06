@@ -16,4 +16,10 @@ export const useStyles = () =>
       width: '100%',
       padding: 0,
     },
+    fab: {
+      position: 'fixed',
+      bottom: theme.spacing(3),
+      right: theme.spacing(3),
+      // backgroundColor: '#000000',
+    },
   }))();
