@@ -1,7 +1,7 @@
-const NAME = 'my-consultant-';
+const NAME = 'my-consultant';
 const VERSION = 'v1';
-const CACHE_NAME = NAME + VERSION;
-const urlsToCache = ['./index.html', './main.js', './bootstrap.min.css'];
+const CACHE_NAME = `${NAME}-${VERSION}`;
+const urlsToCache = ['./index.html', './index.js'];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
