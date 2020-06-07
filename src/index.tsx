@@ -5,6 +5,7 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app/App';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
@@ -14,3 +15,5 @@ ReactDOM.render(
   </ThemeProvider>,
   document.getElementById('root'),
 );
+
+serviceWorker.register();
