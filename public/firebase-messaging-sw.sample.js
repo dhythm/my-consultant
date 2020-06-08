@@ -1,14 +1,10 @@
-// import '@firebase/app';
-import '@firebase/messaging';
-import * as firebase from 'firebase/app';
+importScripts('https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/5.5.2/firebase-messaging.js');
 
-// importScripts('https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js');
-// importScripts('https://www.gstatic.com/firebasejs/5.5.2/firebase-messaging.js');
-
-const FIREBASE_API_KEY = process.env.FIREBASE_API_KEY;
-const FIREBASE_PROJECT_ID = process.env.FIREBASE_PROJECT_ID;
-const FIREBASE_VAPID_KEY = process.env.FIREBASE_VAPID_KEY;
-const FIREBASE_SENDER_ID = process.env.FIREBASE_SENDER_ID;
+const FIREBASE_API_KEY = '';
+const FIREBASE_PROJECT_ID = '';
+const FIREBASE_VAPID_KEY = '';
+const FIREBASE_SENDER_ID = '';
 
 const firebaseConfig = {
   apiKey: FIREBASE_API_KEY,
@@ -55,4 +51,17 @@ messaging.setBackgroundMessageHandler(function (payload) {
     notificationTitle,
     notificationOptions,
   );
+});
+
+self.addEventListener('push', function (event) {
+  const title = 'ONIAI';
+  const options = {
+    body: 'あなたのプロフィールがイイねされました',
+    // 通知の右にでる画像
+    icon: '',
+    // 通知の左にでる画像
+    badge: '',
+  };
+
+  event.waitUntil(self.registration.showNotification(title, options));
 });
