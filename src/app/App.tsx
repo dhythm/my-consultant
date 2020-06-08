@@ -20,7 +20,8 @@ const App: React.FunctionComponent = () => {
         <Route path="/advice" element={<AdvicePage />} />
         <Route path="/add-advice" element={<AddAdvicePage />} />
         <Route path="/add-client" element={<AddClientPage />} />
-        <Route path="*" element={<SignInPage />} />
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="*" element={<LifeNavPage />} />
       </Routes>
     </Router>
   );
