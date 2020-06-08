@@ -41,9 +41,8 @@ messaging.setBackgroundMessageHandler(function (payload) {
     '[firebase-messaging-sw.js] Received background message ',
     payload,
   );
-  // Customize notification here
-  let notificationTitle = 'Background Message Title';
-  let notificationOptions = {
+  const notificationTitle = 'Background Message Title';
+  const notificationOptions = {
     body: 'Background Message body.',
   };
 
@@ -54,14 +53,12 @@ messaging.setBackgroundMessageHandler(function (payload) {
 });
 
 self.addEventListener('push', function (event) {
-  const title = 'ONIAI';
-  const options = {
-    body: 'あなたのプロフィールがイイねされました',
-    // 通知の右にでる画像
-    icon: '',
-    // 通知の左にでる画像
-    badge: '',
+  const notificationTitle = 'Background Message Title';
+  const notificationOptions = {
+    body: 'Background Message body.',
   };
 
-  event.waitUntil(self.registration.showNotification(title, options));
+  event.waitUntil(
+    self.registration.showNotification(notificationTitle, notificationOptions),
+  );
 });
