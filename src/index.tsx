@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app/App';
 import * as firebaseServiceWorker from './firebaseServiceWorker';
-import * as serviceWorker from './serviceWorker';
+// import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
@@ -17,5 +17,5 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
-serviceWorker.register();
+// serviceWorker.register();
 firebaseServiceWorker.register();

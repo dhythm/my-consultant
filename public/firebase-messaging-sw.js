@@ -19,6 +19,26 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const messaging = firebase.messaging();
+messaging.usePublicVapidKey(FIREBASE_VAPID_KEY);
+
+messaging.onMessage(payload => {
+  console.log('Message received. ', payload);
+});
+
+messaging
+  .getToken()
+  .then(currentToken => {
+    if (currentToken) {
+      document.getElementById('token').textContent = currentToken;
+    } else {
+      console.log(
+        'No Instance ID token available. Request permission to generate one.',
+      );
+    }
+  })
+  .catch(err => {
+    console.log('An error occurred while retrieving token. ', err);
+  });
 
 messaging.setBackgroundMessageHandler(function (payload) {
   console.log(
