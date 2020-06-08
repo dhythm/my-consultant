@@ -1,4 +1,5 @@
 node_modules/
 dist/
 
+firebase.ts
 firebase-messaging-sw.js

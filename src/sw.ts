@@ -3,7 +3,7 @@ const VERSION = 'v1';
 const CACHE_NAME = `${NAME}-${VERSION}`;
 const urlsToCache = ['./index.html', './bundle.js'];
 
-self.addEventListener('install', function (event) {
+self.addEventListener('install', function (event: any) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       console.log('Opened cache');
@@ -12,7 +12,7 @@ self.addEventListener('install', function (event) {
   );
 });
 
-self.addEventListener('fetch', function (event) {
+self.addEventListener('fetch', function (event: any) {
   if (
     event.request.cache === 'only-if-cached' &&
     event.request.mode !== 'same-origin'
@@ -28,7 +28,7 @@ self.addEventListener('fetch', function (event) {
   );
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', (event: any) => {
   event.waitUntil(
     caches
       .keys()
