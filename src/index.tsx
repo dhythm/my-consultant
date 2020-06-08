@@ -5,6 +5,7 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app/App';
+import * as firebaseServiceWorker from './firebaseServiceWorker';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -17,3 +18,4 @@ ReactDOM.render(
 );
 
 serviceWorker.register();
+firebaseServiceWorker.register();
