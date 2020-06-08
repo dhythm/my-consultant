@@ -26,6 +26,7 @@ messaging
   .then(currentToken => {
     if (currentToken) {
       console.log({ currentToken });
+      // TODO: Needs to send the token to somewhere that will send a notification.
     } else {
       console.log(
         'No Instance ID token available. Request permission to generate one.',

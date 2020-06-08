@@ -55,15 +55,14 @@ touch .github/workflows/aws.yml
 npm install --save-dev workbox-sw workbox-webpack-plugin
 ```
 
-Create a push notification
+Create a FCM
 ```
-curl -X POST -H "Authorization: key=FIREBASE_API_KEY" -H "Content-Type: application/json" -d '{
+curl -X POST -H "Authorization: key=FIREBASE_SERVER_KEY" -H "Content-Type: application/json" -d '{
   "notification": {
     "title": "Notification Title",
     "body": "Notification Description",
     "icon": "firebase-logo.png",
-    "click_action": ""
   },
-  "to": "FIREBASE_VAPID_KEY"
+  "to": "FIREBASE_MESSAGING_TOKEN"
 }' https://fcm.googleapis.com/fcm/send
 ```
